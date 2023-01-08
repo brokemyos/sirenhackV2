@@ -1,0 +1,81 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Test = Instance.new("ScreenGui")
+local LoginFrame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Key = Instance.new("TextBox")
+local TextButton = Instance.new("TextButton")
+local GetKey = Instance.new("TextButton")
+
+--Properties:
+
+Test.Name = "Test"
+Test.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Test.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+LoginFrame.Name = "LoginFrame"
+LoginFrame.Parent = Test
+LoginFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+LoginFrame.Position = UDim2.new(0.349206328, 0, 0.237037033, 0)
+LoginFrame.Size = UDim2.new(0, 374, 0, 425)
+
+TextLabel.Parent = LoginFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(102, 102, 102)
+TextLabel.Size = UDim2.new(0, 374, 0, 50)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "Brokesiren Hub Key"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+Key.Name = "Key"
+Key.Parent = LoginFrame
+Key.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+Key.Position = UDim2.new(0.0614973269, 0, 0.280000001, 0)
+Key.Size = UDim2.new(0, 304, 0, 84)
+Key.Font = Enum.Font.FredokaOne
+Key.Text = "Key"
+Key.TextColor3 = Color3.fromRGB(0, 0, 0)
+Key.TextScaled = true
+Key.TextSize = 14.000
+Key.TextWrapped = true
+
+TextButton.Parent = LoginFrame
+TextButton.BackgroundColor3 = Color3.fromRGB(136, 136, 136)
+TextButton.Position = UDim2.new(0.200534761, 0, 0.778823555, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.FredokaOne
+TextButton.Text = "Login"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Click:Connect(function()
+	if Key.Text == "dffdieove9v9r" then
+		LoginFrame.Visible = false
+		wait(0.5)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Sirenhead3846/brokesiren-hub/main/brokesiren-hub"))()
+	end
+end)
+
+
+GetKey.Name = "GetKey"
+GetKey.Parent = LoginFrame
+GetKey.BackgroundColor3 = Color3.fromRGB(136, 136, 136)
+GetKey.Position = UDim2.new(0.200534761, 0, 0.618823528, 0)
+GetKey.Size = UDim2.new(0, 200, 0, 50)
+GetKey.Font = Enum.Font.FredokaOne
+GetKey.Text = "Get Key"
+GetKey.TextColor3 = Color3.fromRGB(0, 0, 0)
+GetKey.TextScaled = true
+GetKey.TextSize = 14.000
+GetKey.TextWrapped = true
+GetKey.MouseButton1Click:Connect(function()
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Copied!"; Text = "PASTE IT ON SEARCH !"; Icon = "rbxassetid://11795654320"; Duration = 10 })
+	wait(0.7)
+	setclipboard("https://pastebin.com/K4ctSJW0")
+end)
